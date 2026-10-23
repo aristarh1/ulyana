@@ -8,7 +8,7 @@
 
     <meta name=«viewport» content=«width=device-width, initial-scale=1.0»>
 
-    <title>Для моей Ульяшки ❤️</title>
+    <title>Для Ульяшки ❤️</title>
 
     <style>
 
@@ -18,29 +18,175 @@
 
         }
 
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
         body {
 
             margin: 0;
 
             min-height: 100vh;
 
-            background: #0b0610;
+            background:
+
+                radial-gradient(circle at 50% 20%, #351326 0%, #160914 35%, #070307 75%);
 
             color: white;
 
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, «Segoe UI», Arial, sans-serif;
 
             overflow-x: hidden;
 
         }
 
-        .container {
+        /* Фоновое свечение */
+
+        .glow {
+
+            position: fixed;
+
+            width: 350px;
+
+            height: 350px;
+
+            border-radius: 50%;
+
+            background: rgba(255, 58, 120, 0.12);
+
+            filter: blur(90px);
+
+            pointer-events: none;
+
+        }
+
+        .glow.one {
+
+            top: -100px;
+
+            left: -100px;
+
+        }
+
+        .glow.two {
+
+            right: -120px;
+
+            bottom: -100px;
+
+        }
+
+        /* Главный экран */
+
+        .hero {
 
             min-height: 100vh;
 
             display: flex;
 
-            flex-direction: column;
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 40px 20px;
+
+            position: relative;
+
+        }
+
+        .content {
+
+            max-width: 850px;
+
+            animation: appear 1.5s ease;
+
+        }
+
+        .small {
+
+            font-size: 16px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color: #e9a1ba;
+
+            margin-bottom: 25px;
+
+        }
+
+        h1 {
+
+            margin: 0;
+
+            font-size: clamp(52px, 12vw, 115px);
+
+            line-height: 0.95;
+
+            font-weight: 800;
+
+            background: linear-gradient(135deg, #ff759e, #ffb6cc, #ff4d83);
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+            text-shadow: 0 0 50px rgba(255, 70, 130, 0.25);
+
+        }
+
+        .heart {
+
+            font-size: 85px;
+
+            margin: 30px 0;
+
+            animation: heartbeat 1.4s infinite;
+
+            filter: drop-shadow(0 0 25px rgba(255, 60, 120, 0.6));
+
+        }
+
+        .subtitle {
+
+            color: #d9c4cf;
+
+            font-size: clamp(18px, 4vw, 24px);
+
+            line-height: 1.6;
+
+            margin: 0 auto;
+
+            max-width: 650px;
+
+        }
+
+        .scroll {
+
+            margin-top: 55px;
+
+            color: #9d7f8c;
+
+            font-size: 14px;
+
+            animation: bounce 2s infinite;
+
+        }
+
+        /* Секция */
+
+        .section {
+
+            min-height: 100vh;
+
+            padding: 100px 20px;
+
+            display: flex;
 
             justify-content: center;
 
@@ -48,59 +194,215 @@
 
             text-align: center;
 
-            padding: 30px 20px;
+        }
+
+        .card {
+
+            max-width: 750px;
+
+            padding: 50px 35px;
+
+            border: 1px solid rgba(255, 120, 160, 0.2);
+
+            border-radius: 30px;
+
+            background: rgba(255, 255, 255, 0.035);
+
+            backdrop-filter: blur(15px);
+
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.4);
 
         }
 
-        h1 {
+        .card h2 {
 
-            font-size: clamp(42px, 10vw, 90px);
+            font-size: clamp(35px, 8vw, 60px);
 
-            margin: 0;
-
-            color: #ff5c8a;
-
-            text-shadow: 0 0 30px rgba(255, 92, 138, 0.6);
+            margin: 0 0 30px;
 
         }
 
-        p {
+        .card p {
 
-            max-width: 700px;
+            color: #d7c3cd;
 
-            font-size: 20px;
+            font-size: 19px;
+
+            line-height: 1.8;
+
+        }
+
+        /* Кнопка */
+
+        button {
+
+            margin-top: 35px;
+
+            padding: 17px 35px;
+
+            border: none;
+
+            border-radius: 100px;
+
+            background: linear-gradient(135deg, #ff4d83, #ff759e);
+
+            color: white;
+
+            font-size: 17px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            box-shadow: 0 10px 35px rgba(255, 60, 120, 0.3);
+
+            transition: 0.3s;
+
+        }
+
+        button:hover {
+
+            transform: scale(1.06);
+
+            box-shadow: 0 15px 45px rgba(255, 60, 120, 0.5);
+
+}
+
+        /* Скрытое послание */
+
+        #secret {
+
+            display: none;
+
+            margin-top: 35px;
+
+            font-size: 24px;
+
+            color: #ff9fbb;
 
             line-height: 1.6;
 
-            color: #e8dce5;
+            animation: appear 0.8s ease;
 
         }
 
-        .heart {
+        /* Бесконечные люблю */
 
-            font-size: 80px;
+        .love-wall {
 
-            margin: 20px 0;
+            min-height: 100vh;
 
-            animation: heartbeat 1.3s infinite;
+            padding: 100px 20px;
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
 
         }
 
-        .love {
+        .love-wall h2 {
 
-            margin-top: 30px;
+            font-size: clamp(40px, 9vw, 75px);
 
-            padding: 16px 30px;
+            margin-bottom: 50px;
 
-            border: 1px solid #ff5c8a;
+        }
 
-            border-radius: 50px;
+        .loves {
 
-            color: #ff8eac;
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            max-width: 1000px;
+
+            margin: auto;
+
+        }
+
+        .love-word {
+
+            color: #ff9fbb;
+
+            opacity: 0.65;
+
+            font-size: 17px;
+
+            transition: 0.3s;
+
+        }
+
+        .love-word:hover {
+
+            opacity: 1;
+
+            transform: scale(1.15);
+
+        }
+
+        /* Финал */
+
+        .final {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px 20px;
+
+        }
+
+        .final h2 {
+
+            font-size: clamp(50px, 12vw, 110px);
+
+            margin: 0;
+
+            background: linear-gradient(135deg, #ff4d83, #ffd0dc);
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        .final p {
+
+            color: #bda7b1;
 
             font-size: 18px;
 
-            box-shadow: 0 0 25px rgba(255, 92, 138, 0.2);
+            margin-top: 25px;
+
+        }
+
+        /* Плавающие сердца */
+
+        .floating-heart {
+
+            position: fixed;
+
+            bottom: -50px;
+
+            pointer-events: none;
+
+            opacity: 0;
+
+            animation: float 9s linear infinite;
+
+            z-index: 10;
 
         }
 
@@ -114,29 +416,15 @@
 
             50% {
 
-                transform: scale(1.15);
+                transform: scale(1.18);
 
             }
 
         }
 
-        .floating-heart {
-
-            position: fixed;
-
-            bottom: -50px;
-
-            font-size: 20px;
-
-            opacity: 0.7;
-
-            animation: float 8s linear infinite;
-
-        }
-
         @keyframes float {
 
-            from {
+            0% {
 
                 transform: translateY(0) rotate(0deg);
 
@@ -144,23 +432,59 @@
 
             }
 
-            20% {
+            15% {
 
                 opacity: 0.7;
 
             }
 
-            80% {
+            85% {
 
                 opacity: 0.7;
+
+            }
+
+            100% {
+
+                transform: translateY(-110vh) rotate(360deg);
+
+                opacity: 0;
+
+            }
+
+        }
+
+        @keyframes appear {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(25px);
 
             }
 
             to {
 
-                transform: translateY(-110vh) rotate(360deg);
+                opacity: 1;
 
-                opacity: 0;
+                transform: translateY(0);
+
+            }
+
+        }
+
+        @keyframes bounce {
+
+            0%, 100% {
+
+                transform: translateY(0);
+
+            }
+
+            50% {
+
+                transform: translateY(8px);
 
             }
 
@@ -172,39 +496,241 @@
 
 <body>
 
-    <div class=«container»>
+    <div class=«glow one»></div>
 
-        <div class=«heart»>❤️</div>
+    <div class=«glow two»></div>
 
-        <h1>Я тебя люблю, Ульяшка</h1>
+    <!— Плавающие сердца —>
 
-        <p>
+    <div class=«floating-heart» style=«left: 8%; animation-delay: 0s;»>❤️</div>
 
-            Этот сайт существует только по одной причине —
+    <div class=«floating-heart» style=«left: 20%; animation-delay: 3s;»>💕</div>
 
-            чтобы ещё раз сказать тебе то, что я чувствую.
+    <div class=«floating-heart» style=«left: 40%; animation-delay: 6s;»>❤️</div>
 
-        </p>
+    <div class=«floating-heart» style=«left: 60%; animation-delay: 2s;»>💗</div>
 
-        <div class=«love»>
+    <div class=«floating-heart» style=«left: 80%; animation-delay: 5s;»>❤️</div>
 
-            Я тебя люблю. Очень. ❤️
+    <div class=«floating-heart» style=«left: 92%; animation-delay: 1s;»>💕</div>
+
+    <!— ГЛАВНЫЙ ЭКРАН —>
+
+    <section class=«hero»>
+
+        <div class=«content»>
+
+            <div class=«small»>
+
+                кое-что для тебя
+
+            </div>
+
+            <div class=«heart»>
+
+                ❤️
+
+            </div>
+
+            <h1>
+
+                Ульяшка
+
+            </h1>
+
+            <p class=«subtitle»>
+
+                Я мог бы просто сказать тебе это словами.
+Но мне захотелось сделать целый сайт,
+
+                чтобы сказать одну простую вещь.
+
+            </p>
+
+            <div class=«scroll»>
+
+                ↓ листай дальше ↓
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-    <div class=«floating-heart» style=«left: 10%; animation-delay: 0s;»>❤️</div>
+    <!— ПОСЛАНИЕ —>
 
-    <div class=«floating-heart» style=«left: 30%; animation-delay: 2s;»>💕</div>
+    <section class=«section»>
 
-    <div class=«floating-heart» style=«left: 55%; animation-delay: 4s;»>❤️</div>
+        <div class=«card»>
 
-    <div class=«floating-heart» style=«left: 75%; animation-delay: 1s;»>💗</div>
+            <h2>
 
-    <div class=«floating-heart» style=«left: 90%; animation-delay: 3s;»>❤️</div>
+                Я тебя люблю.
+
+            </h2>
+
+            <p>
+
+                Очень сильно.
+
+                <br><br>
+
+                Иногда мне кажется, что этих слов недостаточно,
+
+                поэтому я решил сделать место, где их будет
+
+                настолько много, насколько сильно я тебя люблю.
+
+                <br><br>
+
+                И да.
+
+                Я потратил время на создание сайта,
+
+                просто чтобы сказать тебе это. ❤️
+
+            </p>
+
+            <button onclick=«showSecret()»>
+
+                нажми сюда ❤️
+
+            </button>
+
+            <div id=«secret»>
+
+                Ты — моя любимая Ульяшка.
+
+                <br>
+
+                И я тебя люблю. Очень. ❤️
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!— СТЕНА ЛЮБВИ —>
+
+    <section class=«love-wall»>
+
+        <h2>
+
+            Я тебя люблю
+
+        </h2>
+
+        <div class=«loves»>
+
+            <span class=«love-word»>я тебя люблю ❤️</span>
+
+            <span class=«love-word»>я тебя люблю 💕</span>
+
+            <span class=«love-word»>я тебя люблю ❤️</span>
+
+            <span class=«love-word»>я тебя люблю 💗</span>
+
+            <span class=«love-word»>я тебя люблю ❤️</span>
+
+            <span class=«love-word»>я тебя люблю 💕</span>
+
+            <span class=«love-word»>я тебя люблю 💗</span>
+
+            <span class=«love-word»>я тебя люблю ❤️</span>
+
+            <span class=«love-word»>я тебя люблю 💕</span>
+
+            <span class=«love-word»>я тебя люблю ❤️</span>
+
+            <span class=«love-word»>я тебя люблю 💗</span>
+
+            <span class=«love-word»>я тебя люблю ❤️</span>
+
+            <span class=«love-word»>я тебя люблю 💕</span>
+
+            <span class=«love-word»>я тебя люблю ❤️</span>
+
+            <span class=«love-word»>я тебя люблю 💗</span>
+
+            <span class=«love-word»>я тебя люблю ❤️</span>
+
+            <span class=«love-word»>я тебя люблю 💕</span>
+
+            <span class=«love-word»>я тебя люблю ❤️</span>
+
+            <span class=«love-word»>я тебя люблю 💗</span>
+
+            <span class=«love-word»>я тебя люблю ❤️</span>
+
+            <span class=«love-word»>я тебя люблю 💕</span>
+
+            <span class=«love-word»>я тебя люблю ❤️</span>
+
+            <span class=«love-word»>я тебя люблю 💗</span>
+
+            <span class=«love-word»>я тебя люблю ❤️</span>
+
+            <span class=«love-word»>я тебя люблю 💕</span>
+
+            <span class=«love-word»>я тебя люблю ❤️</span>
+
+            <span class=«love-word»>я тебя люблю 💗</span>
+
+            <span class=«love-word»>я тебя люблю ❤️</span>
+
+            <span class=«love-word»>я тебя люблю 💕</span>
+
+            <span class=«love-word»>я тебя люблю ❤️</span>
+
+            <span class=«love-word»>я тебя люблю 💗</span>
+
+        </div>
+
+    </section>
+
+    <!— ФИНАЛ —>
+
+    <section class=«final»>
+
+        <div>
+
+            <h2>
+
+                Люблю тебя.
+
+            </h2>
+
+            <p>
+
+                Сегодня. Завтра. И каждый день после этого. ❤️
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        function showSecret() {
+
+            const secret = document.getElementById(«secret»);
+
+            if (secret.style.display === «block») {
+
+                secret.style.display = «none»;
+
+            } else {
+
+                secret.style.display = «block»;
+
+            }
+
+        }
+
+    </script>
 
 </body>
 
 </html>
-<!— site update —>
