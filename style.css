@@ -757,3 +757,83 @@ footer {
     }
 
 }
+
+.photo-placeholder {
+
+    height: 420px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(circle at center, rgba(255, 111, 159, 0.10), transparent 55%);
+
+}
+
+.photo-placeholder-heart {
+
+    font-size: 42px;
+
+    color: var(--pink);
+
+    opacity: 0.8;
+
+    animation: photoHeart 3s ease-in-out infinite;
+
+}
+
+.photo-placeholder-title {
+
+    margin-top: 20px;
+
+    color: #f4dce5;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 38px;
+
+}
+
+.photo-placeholder-text {
+
+    margin-top: 12px;
+
+    color: #a9959f;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+}
+
+@keyframes photoHeart {
+
+    0%, 100% {
+
+        transform: scale(1);
+
+        opacity: 0.65;
+
+    }
+
+    50% {
+
+        transform: scale(1.12);
+
+        opacity: 1;
+
+    }
+
+}
