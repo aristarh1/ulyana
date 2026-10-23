@@ -39,17 +39,39 @@ body::before {
 
     position: fixed;
 
-    inset: 0;
+    inset: -20%;
 
     pointer-events: none;
 
     background:
 
-        radial-gradient(circle at 20% 20%, rgba(255, 80, 140, 0.12), transparent 30%),
+        radial-gradient(circle at 20% 20%, rgba(255, 80, 140, 0.16), transparent 30%),
 
-        radial-gradient(circle at 80% 70%, rgba(180, 70, 255, 0.08), transparent 30%);
+        radial-gradient(circle at 80% 70%, rgba(180, 70, 255, 0.11), transparent 30%),
+
+        radial-gradient(circle at 50% 100%, rgba(255, 100, 160, 0.08), transparent 35%);
 
     z-index: -1;
+
+    animation: backgroundMove 14s ease-in-out infinite alternate;
+
+}
+
+@keyframes backgroundMove {
+
+    0% {
+
+        transform: translate3d(-2%, -1%, 0) scale(1);
+
+    }
+
+    100% {
+
+        transform: translate3d(2%, 2%, 0) scale(1.08);
+
+    }
+
+}
 
 }
 .hero {
