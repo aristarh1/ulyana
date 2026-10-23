@@ -837,3 +837,25 @@ footer {
     }
 
 }
+
+.music-button.playing {
+
+    animation: musicPulse 2s ease-in-out infinite;
+
+}
+
+@keyframes musicPulse {
+
+    0%, 100% {
+
+        box-shadow: 0 0 15px rgba(255, 111, 159, 0.15);
+
+    }
+
+    50% {
+
+        box-shadow: 0 0 35px rgba(255, 111, 159, 0.4);
+
+    }
+
+}
