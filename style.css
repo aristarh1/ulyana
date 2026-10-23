@@ -327,19 +327,49 @@ body::before {
 
     border-radius: 14px;
 
-    transition: 0.4s ease;
+    transition: transform 0.4s ease, border-color 0.4s ease, background 0.4s ease;
+
+    animation: loveFloat 5s ease-in-out infinite;
+
+}
+
+.love-word:nth-child(2n) {
+
+    animation-delay: 1s;
+
+}
+
+.love-word:nth-child(3n) {
+
+    animation-delay: 2s;
 
 }
 
 .love-word:hover {
 
-    transform: translateY(-5px);
+    transform: translateY(-8px) scale(1.03);
 
     border-color: rgba(255, 111, 159, 0.55);
 
     background: rgba(255, 111, 159, 0.07);
 
     box-shadow: 0 15px 40px rgba(255, 70, 130, 0.12);
+
+}
+
+@keyframes loveFloat {
+
+    0%, 100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-5px);
+
+    }
 
 }
 
