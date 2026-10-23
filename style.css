@@ -508,7 +508,7 @@ footer {
 }
 .hero::after {
 
-    content: "TEST";
+    content: "\2193";
 
     position: absolute;
 
