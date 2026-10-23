@@ -401,6 +401,8 @@ body::before {
 
     font-weight: 400;
 
+    font-family: "Cormorant Garamond", serif;
+
     color: #fff;
 
     text-shadow: 0 0 50px rgba(255, 100, 160, 0.3);
