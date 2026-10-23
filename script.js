@@ -46,11 +46,15 @@ function toggleMusic() {
 
         button.textContent = "⏸️ Поставить на паузу";
 
+        button.classList.add("playing");
+
     } else {
 
         song.pause();
 
         button.textContent = "▶️ Продолжить песню";
+
+        button.classList.remove("playing");
 
     }
 
