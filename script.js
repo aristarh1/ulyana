@@ -33,3 +33,25 @@ var revealOnScroll = function() {
 window.addEventListener(String.fromCharCode(115,99,114,111,108,108), revealOnScroll);
 
 window.addEventListener(String.fromCharCode(108,111,97,100), revealOnScroll);
+
+function toggleMusic() {
+
+    var song = document.getElementById("ourSong");
+
+    var button = document.querySelector(".music-button");
+
+    if (song.paused) {
+
+        song.play();
+
+        button.textContent = "⏸️ Поставить на паузу";
+
+    } else {
+
+        song.pause();
+
+        button.textContent = "▶️ Продолжить песню";
+
+    }
+
+}
