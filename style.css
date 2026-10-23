@@ -385,15 +385,41 @@ body::before {
 
     margin: 50px auto 0;
 
-    border-radius: 24px;
+    border-radius: 28px;
 
     overflow: hidden;
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 111, 159, 0.18);
 
-    background: rgba(255, 255, 255, 0.025);
+    background: linear-gradient(
 
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+        145deg,
+
+        rgba(255, 111, 159, 0.08),
+
+        rgba(255, 255, 255, 0.025)
+
+    );
+
+    box-shadow:
+
+        0 30px 80px rgba(0, 0, 0, 0.45),
+
+        0 0 60px rgba(255, 80, 140, 0.06);
+
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+
+}
+
+.photo-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+
+        0 40px 100px rgba(0, 0, 0, 0.55),
+
+        0 0 80px rgba(255, 80, 140, 0.12);
 
 }
 
