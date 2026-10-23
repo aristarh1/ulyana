@@ -540,7 +540,7 @@ footer {
 
 .hero-heart::after {
 
-    content: «\2665»;
+    content: "\2665";
 
     position: absolute;
 
