@@ -840,7 +840,13 @@ footer {
 
 .music-button.playing {
 
-    animation: musicPulse 2s ease-in-out infinite;
+    background: var(--pink);
+
+    color: #18070e;
+
+    box-shadow: 0 0 35px rgba(255, 111, 159, 0.55);
+
+    animation: musicPulse 1.5s ease-in-out infinite;
 
 }
 
@@ -848,13 +854,17 @@ footer {
 
     0%, 100% {
 
-        box-shadow: 0 0 15px rgba(255, 111, 159, 0.15);
+        transform: scale(1);
+
+        box-shadow: 0 0 25px rgba(255, 111, 159, 0.35);
 
     }
 
     50% {
 
-        box-shadow: 0 0 35px rgba(255, 111, 159, 0.4);
+        transform: scale(1.04);
+
+        box-shadow: 0 0 50px rgba(255, 111, 159, 0.7);
 
     }
 
