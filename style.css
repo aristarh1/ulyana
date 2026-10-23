@@ -95,7 +95,71 @@ body::before {
 
     max-width: 850px;
 
-    animation: appear 1.5s ease;
+    animation: heroAppear 1.8s ease forwards;
+
+}
+
+.hero-kicker {
+
+    animation: fadeUp 1s ease 0.2s both;
+
+}
+
+.hero h1 {
+
+    animation: fadeUp 1.2s ease 0.45s both;
+
+}
+
+.hero-subtitle {
+
+    animation: fadeUp 1.2s ease 0.75s both;
+
+}
+
+.hero-heart {
+
+    animation:
+
+        fadeUp 1.2s ease 1s both,
+
+        pulse 2.5s 2.2s infinite;
+
+}
+
+@keyframes heroAppear {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
 
 }
 
