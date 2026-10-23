@@ -1,1 +1,209 @@
+<!DOCTYPE html>
 
+<html lang=«ru»>
+
+<head>
+
+    <meta charset=«UTF-8»>
+
+    <meta name=«viewport» content=«width=device-width, initial-scale=1.0»>
+
+    <title>Для моей Ульяшки ❤️</title>
+
+    <style>
+
+        * {
+
+            box-sizing: border-box;
+
+        }
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            background: #0b0610;
+
+            color: white;
+
+            font-family: Arial, sans-serif;
+
+            overflow-x: hidden;
+
+        }
+
+        .container {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+        }
+
+        h1 {
+
+            font-size: clamp(42px, 10vw, 90px);
+
+            margin: 0;
+
+            color: #ff5c8a;
+
+            text-shadow: 0 0 30px rgba(255, 92, 138, 0.6);
+
+        }
+
+        p {
+
+            max-width: 700px;
+
+            font-size: 20px;
+
+            line-height: 1.6;
+
+            color: #e8dce5;
+
+        }
+
+        .heart {
+
+            font-size: 80px;
+
+            margin: 20px 0;
+
+            animation: heartbeat 1.3s infinite;
+
+        }
+
+        .love {
+
+            margin-top: 30px;
+
+            padding: 16px 30px;
+
+            border: 1px solid #ff5c8a;
+
+            border-radius: 50px;
+
+            color: #ff8eac;
+
+            font-size: 18px;
+
+            box-shadow: 0 0 25px rgba(255, 92, 138, 0.2);
+
+        }
+
+        @keyframes heartbeat {
+
+            0%, 100% {
+
+                transform: scale(1);
+
+            }
+
+            50% {
+
+                transform: scale(1.15);
+
+            }
+
+        }
+
+        .floating-heart {
+
+            position: fixed;
+
+            bottom: -50px;
+
+            font-size: 20px;
+
+            opacity: 0.7;
+
+            animation: float 8s linear infinite;
+
+        }
+
+        @keyframes float {
+
+            from {
+
+                transform: translateY(0) rotate(0deg);
+
+                opacity: 0;
+
+            }
+
+            20% {
+
+                opacity: 0.7;
+
+            }
+
+            80% {
+
+                opacity: 0.7;
+
+            }
+
+            to {
+
+                transform: translateY(-110vh) rotate(360deg);
+
+                opacity: 0;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class=«container»>
+
+        <div class=«heart»>❤️</div>
+
+        <h1>Я тебя люблю, Ульяшка</h1>
+
+        <p>
+
+            Этот сайт существует только по одной причине —
+
+            чтобы ещё раз сказать тебе то, что я чувствую.
+
+        </p>
+
+        <div class=«love»>
+
+            Я тебя люблю. Очень. ❤️
+
+        </div>
+
+    </div>
+
+    <div class=«floating-heart» style=«left: 10%; animation-delay: 0s;»>❤️</div>
+
+    <div class=«floating-heart» style=«left: 30%; animation-delay: 2s;»>💕</div>
+
+    <div class=«floating-heart» style=«left: 55%; animation-delay: 4s;»>❤️</div>
+
+    <div class=«floating-heart» style=«left: 75%; animation-delay: 1s;»>💗</div>
+
+    <div class=«floating-heart» style=«left: 90%; animation-delay: 3s;»>❤️</div>
+
+</body>
+
+</html>
