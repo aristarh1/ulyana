@@ -508,7 +508,7 @@ footer {
 }
 .hero::after {
 
-    content: «↓»;
+    content: «\2193»;
 
     position: absolute;
 
@@ -538,7 +538,7 @@ footer {
 
 .hero-heart::after {
 
-    content: «♥️»;
+    content: «\2665»;
 
     position: absolute;
 
