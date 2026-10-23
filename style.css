@@ -869,3 +869,19 @@ footer {
     }
 
 }
+
+.music-title {
+
+    margin: 0 0 30px;
+
+    font-size: clamp(38px, 7vw, 70px);
+
+    font-weight: 400;
+
+    font-family: "Cormorant Garamond", serif;
+
+    line-height: 1;
+
+    color: #fff;
+
+}
